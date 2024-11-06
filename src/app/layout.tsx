@@ -6,8 +6,8 @@ import { Header } from "@/components/header";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Next.js AI Lite App",
-  description: "AI with Next and AI SDK",
+  title: "Money Maker",
+  description: "A fleer of expert agents",
 };
 
 export default function RootLayout({

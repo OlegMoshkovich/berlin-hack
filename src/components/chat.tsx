@@ -72,7 +72,7 @@ export default function Chat() {
               </div>
               {messages.length > 1 && (
                 <div className="text-center">
-                  <Link href="/genui" className="text-xs text-blue-400">Try GenUI and streaming components &rarr;</Link>
+                  <Link href="/genui" className="text-xs text-blue-400">Try a sample sales training agent &rarr;</Link>
                 </div>
               )}
             </form>
