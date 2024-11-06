@@ -1,4 +1,3 @@
-// import Chat from "@/components/chat";
 'use client';
 
 import { useState } from 'react';
@@ -21,58 +20,19 @@ export default function GenUI() {
     ]);
     setInput("")
     setConversation(messages);
-  } 
+  }
   const handleKeyDown = (e: { key: string; }) => {
     if (e.key === 'Enter') {
       handleSubmit();
     }
   }
   return (
-    <div className="relative flex h-[calc(100vh_-_theme(spacing.16))] overflow-hidden pb-10 flex-col">
-      <div className="group w-full overflow-auto">
-      <div className="max-w-xl mx-auto mt-10 mb-24">
-        {conversation.length <=0 && (
-          <GenUICard />
-        )}
-        {conversation.map((message, index) => (
-          <div key={index} className="whitespace-pre-wrap flex mb-5">
-            <div className={`${message.role === 'user' ? 'bg-slate-200 ml-auto' : 'bg-transparent w-full'} p-2 rounded-lg`}>
-              <div>
-                {message.content as string}
-              </div>
-              <div>
-                {message.display}
-              </div>
-            </div>
-          </div>
-        ))}
+    <div className="relative flex h-[calc(100vh_-_theme(spacing.16))] overflow-hidden pb-10 flex-col justify-center items-center">
+      {/* Eleven Labs Widget */}
+      <div className="flex justify-center my-10">
+        <elevenlabs-convai agent-id="gPtF50ZrlDJhUN9ta3U6"></elevenlabs-convai>
       </div>
-      <div className="fixed inset-x-0 bottom-10 w-full ">
-        <div className="w-full max-w-xl mx-auto">
-          <Card className="p-2">
-            <div className="flex">
-              <Input
-                type="text"
-                value={input}
-                onKeyDown={handleKeyDown}
-                onChange={event => {
-                  setInput(event.target.value);
-                }}
-                className="w-[95%] mr-2 border-0 ring-offset-0 focus-visible:ring-0 focus-visible:outline-none focus:outline-none focus:ring-0 ring-0 focus-visible:border-none border-transparent focus:border-transparent focus-visible:ring-none"
-                placeholder='Ask me anything...'
-              />
-              <Button
-                onClick={handleSubmit}
-                disabled={!input.trim()}
-              >
-                <IconArrowUp />
-              </Button> 
-            </div>
-          </Card>
-        </div>
-        
-      </div>
-    </div>
+      <script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
     </div>
   );
 }
