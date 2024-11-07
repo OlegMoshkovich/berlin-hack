@@ -30,7 +30,7 @@ export default function GenUI() {
     <div className="relative flex h-[calc(100vh_-_theme(spacing.16))] overflow-hidden pb-10 flex-col justify-center items-center">
       {/* Centered Image */}
       <div className="flex justify-center my-10">
-        <img src="/agent.png" alt="Agent" className="max-w-full h-auto" style={{ width: '400px' }} />
+        <img src="/agent.png" alt="Agent" className="max-w-full h-auto" style={{ width: '400px', borderRadius: '20%' }} />
       </div>
 
       {/* Eleven Labs Widget */}
