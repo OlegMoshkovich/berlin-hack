@@ -47,7 +47,7 @@ export default function Home() {
       <Box sx={{ width: '100%', maxWidth: '710px', height: '240px', overflowY: 'auto', borderRadius: '8px', padding: '16px' }}>
         {!messages.length && (
           <Stack direction='column' spacing={2} justifyContent="center" alignItems="center" sx={{ width: '100%' }}>
-            <Typography variant='overline' sx={{ fontWeight: 'bold' }}>Orchestrated AI workspace | Prototype</Typography>
+            <Typography variant='overline' sx={{ fontWeight: 'bold', paddingTop:'40px' }}>Orchestrated AI workspace | Prototype</Typography>
             <Typography variant="caption" gutterBottom sx={{ width: '720px', paddingBottom: '16px', backgroundColor: 'white', padding: '16px', borderRadius: '12px' }}>
             This framework was developed during 24h hackathon organized by Milvus and Google in Berlin.
             <br/>
