@@ -61,7 +61,7 @@ export default function GenUI() {
               </ul>
             </li>
             <li>
-              Remember, the more details you provide, the more personalized and beneficial your session will be. Feel free to begin whenever you're ready!
+              Remember, the more details you provide, the more personalized and beneficial your session will be. Feel free to begin whenever you&apos;re ready!
             </li>
           </ul>
         </Typography>

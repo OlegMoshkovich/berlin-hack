@@ -41,7 +41,7 @@ export default function GenUI() {
                 <li>Start the Simulation:</li>
                 <li>Topic or Subject: Specify what you will be discussing.</li>
                 <li>Target Audience: Define who you are speaking to.</li>
-                <li>Audience's Role or Position: Mention who you will be addressing (e.g., CEO, manager, team leader).</li>
+                <li>Audience&apos;s Role or Position: Mention who you will be addressing (e.g., CEO, manager, team leader).</li>
                 <li>Specific Objectives: Define what you aim to achieve in this conversation (e.g., persuade, inform, entertain).</li>
                 <li>Conversation Difficulty (1-10): Indicate how challenging you would like the conversation to be.</li>
                 <li>Audience Status: State whether the audience is new, familiar, or someone you have lost contact with.</li>
@@ -52,7 +52,7 @@ export default function GenUI() {
               <div style={{ fontWeight: 'bold' }}>Engage in Conversation:</div>
               <ul>
                 <li>The simulator will assume the role of an audience member and initiate a conversation based on the details you have provided.</li>
-                <li>It will simulate realistic factors such as time constraints, audience engagement, topic relevance, urgency level, and the audience's expectations, depending on the difficulty level you have set.</li>
+                <li>It will simulate realistic factors such as time constraints, audience engagement, topic relevance, urgency level, and the audience&apos;s expectations, depending on the difficulty level you have set.</li>
               </ul>
             </li>
             <li>
@@ -63,7 +63,7 @@ export default function GenUI() {
               </ul>
             </li>
             <li>
-              Remember, the more details you provide, the more personalized and effective your practice session will be. Let's get started whenever you are ready!
+              Remember, the more details you provide, the more personalized and effective your practice session will be. Let&apos;s get started whenever you are ready!
             </li>
           </ul>
         </Typography>
