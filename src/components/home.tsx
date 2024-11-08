@@ -153,18 +153,21 @@ export default function Home() {
                 title="Github questions"
                 description="Learn how to manage your private conversations securely."
                 lastChanged="October 10, 2023"
+                        link="/"
 
               />
               <SimpleCard
                 title="Legal questions"
                 description="Understand and configure your privacy settings for private chats."
                 lastChanged="October 12, 2023"
+                        link="/"
 
               />
               <SimpleCard
                 title="Time management"
                 description="Understand and configure your privacy settings for private chats."
                 lastChanged="October 12, 2023"
+                link="/"
               />
             </Stack>
           </Stack>
