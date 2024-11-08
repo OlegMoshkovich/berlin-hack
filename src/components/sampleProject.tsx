@@ -5,12 +5,7 @@ import { type CoreMessage } from 'ai';
 import { useState } from 'react';
 import { continueTextConversation } from '@/app/actions';
 import { readStreamableValue } from 'ai/rsc';
-import { IconArrowUp } from '@/components/ui/icons';
-import Link from "next/link";
-import AboutCard from "@/components/cards/aboutcard";
-import SimpleCard from "@/components/SimpleCard";
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
-import Image from 'next/image';
 
 export const maxDuration = 30;
 const avatarUrls = [
@@ -56,7 +51,7 @@ export default function SampleProject() {
           {avatarUrls.map((_, index) => (
             <div
               key={index}
-              className="w-9 h-9 rounded-full border-2 border-white overflow-hidden transform transition-transform duration-200 hover:scale-200"
+              className="w-9 h-9 rounded-full overflow-hidden transform transition-transform duration-200 hover:scale-200"
               title={`User ${index + 1}`}
               style={{ backgroundColor: `hsl(0, 0%, ${index * 10 + 20}%)` }}
             >
@@ -69,14 +64,14 @@ export default function SampleProject() {
       </Box>
       <Stack direction='column' justifyContent="center" alignItems="center" spacing={2} sx={{ position: 'absolute', top: '20px' }}>
         <Typography variant="overline" gutterBottom sx={{ fontWeight: 'bold' }}>
-            Mobile wireframe workspace
+            Mobile wireframe - project workspace
           </Typography>
-            <Typography variant="caption" gutterBottom sx={{ width: '720px', paddingBottom: '16px', backgroundColor: 'white', padding: '16px', borderRadius: '12px' }}>
-          Projects serve as collaborative workspaces where teams can engage in meaningful discussions and share insights related to their specific tasks. These projects house essential documents, ensuring that all team members, including project custodians, are well-informed about the project&apos;s context. Additionally, projects can include experts who contribute their knowledge and expertise to discussions when invited, fostering a rich environment for collaboration and innovation.
-          </Typography>
+        <Typography variant="caption" gutterBottom sx={{ width: '720px', paddingBottom: '16px', backgroundColor: 'white', padding: '16px', borderRadius: '12px' }}>
+          We are putting together a mobile wireframe for the collaborative workspace application built with AI. This project includes a designer expert and a developer expert. We are using user interview results to craft the mobile experience and create wireframes that represent the user flow.
+        </Typography>
       </Stack>
 
-      <Box sx={{ width: '100%', maxWidth: '600px', marginBottom: '40px', marginTop:'120px' }}>
+      <Box sx={{ width: '100%', maxWidth: '600px', marginBottom: '40px', marginTop:'80px' }}>
       <Card sx={{ padding: '16px', backgroundColor:'transparent' }} elevation={0}>
           <form onSubmit={handleSubmit}>
             <Box sx={{ display: 'flex' }}>
@@ -114,13 +109,13 @@ export default function SampleProject() {
           <Box key={index} sx={{ whiteSpace: 'pre-wrap', display: 'flex', marginBottom: '16px' }}>
             <Box
               sx={{
-                backgroundColor: message.role === 'user' ? '#B4C5D6' : '#B4C5D6',
+                backgroundColor: message.role === 'user' ? '#D9E1EA' : '#D9E1EA',
                 padding: '6px',
                 marginLeft: message.role === 'user' ? 'auto' : undefined,
                 borderRadius: '4px',
               }}
             >
-              <Typography>{message.content as string}</Typography>
+              <Typography variant='body2' sx={{ fontSize:'12px' }} >{message.content as string}</Typography>
             </Box>
           </Box>
         ))}

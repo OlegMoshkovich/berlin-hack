@@ -43,32 +43,33 @@ export default function Home() {
   return (
     <Box sx={{ width: '100%', overflow: 'auto', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-start', minHeight: '100vh' }}>
 
+
       <Box sx={{ width: '100%', maxWidth: '710px', height: '240px', overflowY: 'auto', borderRadius: '8px', padding: '16px' }}>
         {!messages.length && (
           <Stack direction='column' spacing={2} justifyContent="center" alignItems="center" sx={{ width: '100%' }}>
-            <Typography variant='overline' sx={{ fontWeight: 'bold' }}>Collaborative AI-driven workspace : Prototype</Typography>
+            <Typography variant='overline' sx={{ fontWeight: 'bold' }}>Orchestrated AI workspace | Prototype</Typography>
             <Typography variant="caption" gutterBottom sx={{ width: '720px', paddingBottom: '16px', backgroundColor: 'white', padding: '16px', borderRadius: '12px' }}>
-            This prototype was developed during hackathon organized by Milvus and Google.
+            This framework was developed during 24h hackathon organized by Milvus and Google in Berlin.
             <br/>
-            It demonstrates the integration of AI-driven applications, expert systems, and project workspaces in a collaborative environment design to enhance existing enterprise workflows. </Typography>
+            It is built with the intenion to demonstrate integration of AI applications, expert systems, and workspaces. </Typography>
           </Stack>
         )}
         {messages.map((message, index) => (
           <Box key={index} sx={{ whiteSpace: 'pre-wrap', display: 'flex', marginBottom: '16px' }}>
             <Box
               sx={{
-                backgroundColor: message.role === 'user' ? '#B4C5D6' : '#B4C5D6',
+                backgroundColor: message.role === 'user' ? '#D9E1EA' : '#D9E1EA',
                 padding: '6px',
                 marginLeft: message.role === 'user' ? 'auto' : undefined,
                 borderRadius: '4px',
               }}
             >
-              <Typography>{message.content as string}</Typography>
+              <Typography variant='body2' sx={{ fontSize:'13px' }} >{message.content as string}</Typography>
             </Box>
           </Box>
         ))}
       </Box>
-      <Box sx={{ width: '100%', maxWidth: '750px', marginBottom: '20px' }}>
+      <Box sx={{ width: '100%', maxWidth: '750px', marginBottom: '0px' }}>
         <Card sx={{ padding: '16px', backgroundColor:'transparent' }} elevation={0}>
           <form onSubmit={handleSubmit}>
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
@@ -99,7 +100,7 @@ export default function Home() {
                 }}
                 fullWidth
                 variant="outlined"
-                placeholder='How can I help you'
+                placeholder='How can I help?'
                 InputProps={{
                   endAdornment: (
                     <Button type="submit" sx={{ border:'1px solid lightgrey', borderRadius:'8px', backgroundColor:'black' }} disabled={!input.trim()}>
@@ -119,9 +120,11 @@ export default function Home() {
           </form>
         </Card>
       </Box>
+      <Typography variant="caption" sx={{ marginBottom: '4px', textAlign: 'left', width: '100%', maxWidth: '720px', marginTop:'20px' }}>Threads</Typography>
+      <Box sx={{ width: '100%', maxWidth: '720px', borderBottom: '1px solid lightgrey', marginBottom: '20px', backgroundColor:'lightgrey' }} />
       <>
         {showCards ? (
-          <Stack direction='column' spacing={2} sx={{paddingTop:'20px'}}>
+          <Stack direction='column' spacing={2} sx={{paddingTop:'0px'}}>
             <Stack direction="row" spacing={2}>
               <SimpleCard
                 title="Sprint retro"
@@ -144,7 +147,7 @@ export default function Home() {
             </Stack>
           </Stack>
         ) : (
-          <Stack direction='column' spacing={2} sx={{paddingTop:'20px'}}>
+          <Stack direction='column' spacing={2} >
             <Stack direction="row" spacing={2}>
               <SimpleCard
                 title="Github questions"
@@ -182,7 +185,7 @@ export default function Home() {
               },
             }}
           >
-            Public threads
+            Public
           </Button>
           <Button
             variant={!showCards ? 'contained' : 'outlined'}
@@ -197,7 +200,7 @@ export default function Home() {
               },
             }}
           >
-            Private threads
+            Private
           </Button>
         </Box>
       </>

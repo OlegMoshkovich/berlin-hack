@@ -11,12 +11,11 @@ export default function GenUI() {
 
       {/* Eleven Labs Widget */}
       <div className="flex justify-center items-center h-screen">
-        <div className="flex justify-center my-10">
-          <elevenlabs-convai agent-id="ceXkA4PJYCxqUZVRX9ep"></elevenlabs-convai>
-          <script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
+        <div className="flex justify-center items-center h-screen">
+          <div className="flex justify-center my-10">
+          <elevenlabs-convai agent-id="gPtF50ZrlDJhUN9ta3U6"></elevenlabs-convai><script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>        </div>
         </div>
       </div>
-      <script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
       <Box
         sx={{
           position: 'absolute',

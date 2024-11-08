@@ -46,6 +46,11 @@ const SimpleCard: React.FC<SimpleCardProps> = ({ title, description, lastChanged
             Modified: {lastChanged}
           </Typography>
         )}
+        {!modified && (
+          <Typography variant="caption" color="textSecondary">
+            Today
+          </Typography>
+        )}
       </Stack>
     </Paper>
   );

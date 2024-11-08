@@ -27,8 +27,8 @@ export default function Projects() {
           <Stack direction="row" spacing={2}>
             <SimpleCard
               title="Add a project + "
-              description=""
-              lastChanged=""
+              description="Project can be added by individual contributors"
+              lastChanged="Collaborative workspace"
               height="180px"
               link=""
               modified={false}
