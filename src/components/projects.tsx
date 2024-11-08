@@ -12,7 +12,7 @@ import SimpleCard from "@/components/SimpleCard";
 
 export const maxDuration = 30;
 
-export default function ChatComponent() {
+export default function Projects() {
   const [messages, setMessages] = useState<CoreMessage[]>([]);
   const [input, setInput] = useState<string>('');
 
@@ -34,16 +34,16 @@ export default function ChatComponent() {
               modified={false}
             />
             <SimpleCard
-              title="Feature Highlights"
+              title="Mobile wireframe"
               height="180px"
-              description="Discover the new features added recently."
+              description="Design the UX wireframe for the mobile app"
               lastChanged="October 5, 2023"
               link="/sample-project"
             />
             <SimpleCard
-              title="User Guide"
+              title="Onboarding documents"
               height="180px"
-              description="A comprehensive guide to help you navigate."
+              description="Design a set of onboarding documents for a developer user persona"
               lastChanged="August 20, 2023"
               link="/sample-project"
             />

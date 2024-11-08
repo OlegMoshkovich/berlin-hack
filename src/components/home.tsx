@@ -43,7 +43,7 @@ export default function Home() {
   return (
     <Box sx={{ width: '100%', overflow: 'auto', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-start', minHeight: '100vh' }}>
 
-      <Box sx={{ width: '100%', maxWidth: '710px', height: '260px', overflowY: 'auto', borderRadius: '8px', padding: '16px' }}>
+      <Box sx={{ width: '100%', maxWidth: '710px', height: '240px', overflowY: 'auto', borderRadius: '8px', padding: '16px' }}>
         {!messages.length && (
           <Stack direction='column' spacing={2} justifyContent="center" alignItems="center" sx={{ width: '100%' }}>
             <Typography variant='overline' sx={{ fontWeight: 'bold' }}>Collaborative AI-driven workspace : Prototype</Typography>
@@ -57,10 +57,10 @@ export default function Home() {
           <Box key={index} sx={{ whiteSpace: 'pre-wrap', display: 'flex', marginBottom: '16px' }}>
             <Box
               sx={{
-                backgroundColor: message.role === 'user' ? '#DAEBFD' : '#B4C5D6',
+                backgroundColor: message.role === 'user' ? '#B4C5D6' : '#B4C5D6',
                 padding: '6px',
                 marginLeft: message.role === 'user' ? 'auto' : undefined,
-                borderRadius: '2px',
+                borderRadius: '4px',
               }}
             >
               <Typography>{message.content as string}</Typography>
@@ -121,7 +121,7 @@ export default function Home() {
       </Box>
       <>
         {showCards ? (
-          <Stack direction='column' spacing={2}>
+          <Stack direction='column' spacing={2} sx={{paddingTop:'20px'}}>
             <Stack direction="row" spacing={2}>
               <SimpleCard
                 title="Sprint retro"
@@ -144,7 +144,7 @@ export default function Home() {
             </Stack>
           </Stack>
         ) : (
-          <Stack direction='column' spacing={2}>
+          <Stack direction='column' spacing={2} sx={{paddingTop:'20px'}}>
             <Stack direction="row" spacing={2}>
               <SimpleCard
                 title="Github questions"

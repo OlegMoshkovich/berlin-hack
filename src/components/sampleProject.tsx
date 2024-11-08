@@ -53,48 +53,34 @@ export default function SampleProject() {
     <Box sx={{ width: '100%', overflow: 'auto', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '100vh' }}>
       <Box sx={{ position: 'absolute', top: '20px', right: '0px' }}>
         <div className="flex -space-x-4 mr-4">
-          {avatarUrls.map((url, index) => (
+          {avatarUrls.map((_, index) => (
             <div
               key={index}
               className="w-9 h-9 rounded-full border-2 border-white overflow-hidden transform transition-transform duration-200 hover:scale-200"
               title={`User ${index + 1}`}
+              style={{ backgroundColor: `hsl(0, 0%, ${index * 10 + 20}%)` }}
             >
-              <img src={url} alt={`User ${index + 1}`} className="w-full h-full object-cover" />
             </div>
           ))}
         </div>
       </Box>
       <Box sx={{ position: 'absolute', top: '80px', right: '24px' }}>
-        <Box
-          sx={{
-            width: '300px',
-            height: '300px',
-            backgroundColor: 'lightgrey',
-            borderRadius: '12px',
-            overflow: 'hidden',
-          }}
-        >
-          <Image
-            src="/project.png"
-            alt="Project Image"
-            layout="fill"
-            objectFit="cover"
-          />
-        </Box>
 
       </Box>
-      <Box sx={{ position: 'absolute', top: '400px', right: '24px' }}>
+      <Stack direction='column' justifyContent="center" alignItems="center" spacing={2} sx={{ position: 'absolute', top: '20px' }}>
+        <Typography variant="overline" gutterBottom sx={{ fontWeight: 'bold' }}>
+            Mobile wireframe workspace
+          </Typography>
+            <Typography variant="caption" gutterBottom sx={{ width: '720px', paddingBottom: '16px', backgroundColor: 'white', padding: '16px', borderRadius: '12px' }}>
+          Projects serve as collaborative workspaces where teams can engage in meaningful discussions and share insights related to their specific tasks. These projects house essential documents, ensuring that all team members, including project custodians, are well-informed about the project&apos;s context. Additionally, projects can include experts who contribute their knowledge and expertise to discussions when invited, fostering a rich environment for collaboration and innovation.
+          </Typography>
+      </Stack>
 
-      </Box>
-
-
-
-
-      <Box sx={{ width: '100%', maxWidth: '600px', marginBottom: '40px' }}>
+      <Box sx={{ width: '100%', maxWidth: '600px', marginBottom: '40px', marginTop:'120px' }}>
       <Card sx={{ padding: '16px', backgroundColor:'transparent' }} elevation={0}>
           <form onSubmit={handleSubmit}>
             <Box sx={{ display: 'flex' }}>
-              <TextField
+            <TextField
                 type="text"
                 value={input}
                 onChange={event => {
@@ -105,10 +91,17 @@ export default function SampleProject() {
                 placeholder='How can I help you'
                 InputProps={{
                   endAdornment: (
-                    <Button type="submit" disabled={!input.trim()}>
-                      <ArrowUpwardIcon sx={{ color:'black ' }}/>
+                    <Button type="submit" sx={{ border:'1px solid lightgrey', borderRadius:'8px', backgroundColor:'black' }} disabled={!input.trim()}>
+                      <ArrowUpwardIcon sx={{ color:'white' }}/>
                     </Button>
                   ),
+                }}
+                sx={{
+                  '& .MuiOutlinedInput-root': {
+                    '&.Mui-focused fieldset': {
+                      borderColor: 'black',
+                    },
+                  },
                 }}
               />
             </Box>
@@ -116,15 +109,15 @@ export default function SampleProject() {
         </Card>
       </Box>
 
-      <Box sx={{ width: '100%', maxWidth: '600px', height: '280px', overflowY: 'auto', border: '1px solid lightgrey', borderRadius: '8px', padding: '16px' }}>
+      <Box sx={{ width: '100%', maxWidth: '600px', height: '200px', overflowY: 'auto', borderRadius: '8px', padding: '16px' }}>
         {messages.map((message, index) => (
           <Box key={index} sx={{ whiteSpace: 'pre-wrap', display: 'flex', marginBottom: '16px' }}>
             <Box
               sx={{
-                backgroundColor: message.role === 'user' ? 'lightgrey' : 'transparent',
+                backgroundColor: message.role === 'user' ? '#B4C5D6' : '#B4C5D6',
+                padding: '6px',
                 marginLeft: message.role === 'user' ? 'auto' : undefined,
-                padding: '16px',
-                borderRadius: '8px',
+                borderRadius: '4px',
               }}
             >
               <Typography>{message.content as string}</Typography>
