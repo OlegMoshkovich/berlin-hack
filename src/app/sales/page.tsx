@@ -30,40 +30,40 @@ export default function GenUI() {
         }}
       >
         <Typography variant="caption" sx={{ whiteSpace: 'pre-wrap' }}>
-          <div style={{fontWeight: 'bold'}}>Trainer:</div>
+          <div style={{ fontWeight: 'bold' }}>Trainer:</div>
           <ul>
             <li>
-              This is a tool designed to help you practice and enhance your sales skills through realistic client interactions over the phone. It provides a safe environment to refine your approach, handle objections, and improve your closing techniques, tailored to various sales stages and client profiles.
+              This tool is designed to help you practice and enhance your sales skills through realistic client interactions over the phone. It provides a safe environment to refine your approach, handle objections, and improve your closing techniques, tailored to various sales stages and client profiles.
             </li>
             <li>
-              <div style={{fontWeight: 'bold'}}>How to Use:</div>
+              <div style={{ fontWeight: 'bold' }}>How to Use:</div>
               <ul>
                 <li>Start the Simulation:</li>
-                <li>Product or Service: Specify what you are selling.</li>
-                <li>Target Client: Define who you are selling to.</li>
-                <li>Client's Role or Position: Mention who you will be speaking with (e.g., CEO, manager, procurement officer).</li>
-                <li>Specific Objectives: Define what you aim to achieve in this conversation (e.g., schedule a meeting, close a sale, gather information).</li>
+                <li>Product or Service: Specify what you will be selling.</li>
+                <li>Target Client: Define who you are speaking to.</li>
+                <li>Role or Position of the Client: Mention who you will be addressing (e.g., decision-maker, influencer).</li>
+                <li>Sales Objectives: Define what you aim to achieve in this conversation (e.g., close a deal, gather information).</li>
                 <li>Conversation Difficulty (1-10): Indicate how challenging you would like the conversation to be.</li>
-                <li>Client Status: State whether the client is new, existing, or someone you have lost contact with.</li>
-                <li>Sales Stage: Specify whether this is an initial contact, a follow-up, or a closing conversation.</li>
+                <li>Client Status: State whether the client is new, existing, or a lead you have lost contact with.</li>
+                <li>Sales Stage: Specify whether this is an initial pitch, a follow-up, or a closing call.</li>
               </ul>
             </li>
             <li>
-              <div style={{fontWeight: 'bold'}}>Engage in Conversation:</div>
+              <div style={{ fontWeight: 'bold' }}>Engage in Conversation:</div>
               <ul>
-                <li>The simulator will assume the role of a client and initiate a phone conversation based on the details you have provided.</li>
-                <li>It will simulate realistic factors such as time constraints, competitor involvement, budget considerations, urgency level, and the client's pain points, depending on the difficulty level you have set.</li>
+                <li>The simulator will assume the role of a client and initiate a conversation based on the details you have provided.</li>
+                <li>It will simulate realistic factors such as time constraints, client engagement, product relevance, urgency level, and the expectations of the client, depending on the difficulty level you have set.</li>
               </ul>
             </li>
             <li>
-              <div style={{fontWeight: 'bold'}}>Receive Feedback:</div>
+              <div style={{ fontWeight: 'bold' }}>Receive Feedback:</div>
               <ul>
-                <li>At any point, you can say feedback to end the simulation.</li>
+                <li>At any point, you can request feedback to end the simulation.</li>
                 <li>The simulator will provide constructive feedback on your performance, highlighting strengths and offering suggestions for improvement.</li>
               </ul>
             </li>
             <li>
-              Remember, the more details you provide, the more personalized and effective your practice session will be. Let's get started whenever you are ready!
+              Remember, the more details you provide, the more personalized and effective your practice session will be. Let us get started whenever you are ready!
             </li>
           </ul>
         </Typography>

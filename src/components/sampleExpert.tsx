@@ -12,7 +12,11 @@ import  Link from "next/link";
 import AboutCard from "@/components/cards/aboutcard";
 export const maxDuration = 30;
 
-export default function SampleExpert() {
+interface SampleExpertProps {
+  expertType: 'designer' | 'developer' | 'researcher';
+}
+
+export default function SampleExpert({ expertType }: SampleExpertProps) {
   const [messages, setMessages] = useState<CoreMessage[]>([]);
   const [input, setInput] = useState<string>('');
 
@@ -39,7 +43,7 @@ export default function SampleExpert() {
   return (
     <div className="group w-full overflow-auto ">
       {messages.length <= 0 ? (
-        <AboutCard />
+        <AboutCard expertType={expertType} />
       )
       : (
         <div className="max-w-xl mx-auto mt-10 mb-24">
@@ -70,11 +74,6 @@ export default function SampleExpert() {
                   <IconArrowUp />
                 </Button>
               </div>
-              {messages.length > 1 && (
-                <div className="text-center">
-                  <Link href="/genui" className="text-xs text-blue-400">Try a sample sales training agent &rarr;</Link>
-                </div>
-              )}
             </form>
           </Card>
         </div>

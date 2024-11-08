@@ -70,11 +70,6 @@ export default function Chat() {
                   <IconArrowUp />
                 </Button>
               </div>
-              {messages.length > 1 && (
-                <div className="text-center">
-                  <Link href="/genui" className="text-xs text-blue-400">Try a sample sales training agent &rarr;</Link>
-                </div>
-              )}
             </form>
           </Card>
         </div>
