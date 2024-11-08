@@ -63,21 +63,21 @@ export default function Experts() {
                   title="Researcher"
                   height="180px"
                   description="Finds answers and sources from company documents."
-                  lastChanged="September 15, 2023"
+                  lastChanged="September 15, 2024"
                   link="/researcher"
                 />
                 <SimpleCard
                   title="Designer"
                   height="180px"
                   description="Provides design insights from company resources."
-                  lastChanged="October 5, 2023"
+                  lastChanged="October 5, 2024"
                   link="/designer"
                 />
                 <SimpleCard
                   title="Developer"
                   height="180px"
                   description="Offers insights and solutions in application development and computer science."
-                  lastChanged="August 20, 2023"
+                  lastChanged="August 20, 2024"
                   link="/developer"
                 />
               </Stack>

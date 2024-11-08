@@ -13,7 +13,7 @@ export const maxDuration = 30;
 export default function Home() {
   const [messages, setMessages] = useState<CoreMessage[]>([]);
   const [input, setInput] = useState<string>('');
-  const [showCards, setShowCards] = useState<boolean>(true);
+  const [showCards, setShowCards] = useState<boolean>(false);
   const [selectedModel, setSelectedModel] = useState<string>('chatgpt');
 
   const handleToggleCards = () => {
@@ -46,9 +46,9 @@ export default function Home() {
 
       <Box sx={{ width: '100%', maxWidth: '710px', height: '240px', overflowY: 'auto', borderRadius: '8px', padding: '16px' }}>
         {!messages.length && (
-          <Stack direction='column' spacing={2} justifyContent="center" alignItems="center" sx={{ width: '100%' }}>
+          <Stack direction='column' spacing={2} justifyContent="center" alignItems="center" sx={{ width: '100%', borderRadius:'8px' }}>
             <Typography variant='overline' sx={{ fontWeight: 'bold', paddingTop:'40px' }}>Orchestrated workspace</Typography>
-            <Typography variant="body2" gutterBottom sx={{ width: '720px', paddingBottom: '16px', backgroundColor: 'white', padding: '16px', borderRadius: '12px' }}>
+            <Typography variant="body2" gutterBottom sx={{ width: '100%', paddingBottom: '16px',padding: '16px', borderRadius: '12px' }}>
             This framework was created during 24h hackathon organized by Milvus and Google in Berlin.
             <br/>
             It explores integration of AI applications, expert systems, and collaborative project environments. </Typography>
@@ -121,57 +121,92 @@ export default function Home() {
           </form>
         </Card>
       </Box>
-      <Typography variant="caption" sx={{ marginBottom: '4px', textAlign: 'left', width: '100%', maxWidth: '720px', marginTop:'20px' }}>Threads</Typography>
-      <Box sx={{ width: '100%', maxWidth: '720px', borderBottom: '1px solid lightgrey', marginBottom: '20px', backgroundColor:'lightgrey' }} />
+      <Typography
+        variant="caption"
+        sx={{
+          marginBottom: '4px',
+          textAlign: 'left',
+          width: '100%',
+          maxWidth: '720px',
+          marginTop: '20px',
+          '@media (max-width: 600px)': {
+            display: 'none', // Hide on mobile
+          },
+        }}
+      >
+        Threads
+      </Typography>
+      <Box
+        sx={{
+          width: '100%',
+          maxWidth: '720px',
+          borderBottom: '1px solid lightgrey',
+          marginBottom: '20px',
+          backgroundColor: 'lightgrey',
+          '@media (max-width: 600px)': {
+            display: 'none !important', // Use !important to override other styles
+          },
+        }}
+      />
       <>
         {showCards ? (
-            <Stack direction="row" spacing={2} sx={{paddingTop:'0px' , '@media (max-width: 600px)': {
-              width: '80%',
-              overflowX: 'auto',
-              maxWidth: '400px',
-            },}}>
-              <SimpleCard
-                title="Sprint retro"
-                description="Discussion about the recent sprint, contains notes and feedback from the team."
-                lastChanged="September 15, 2023"
-                link="/"
-              />
-              <SimpleCard
-                title="Feature planning"
-                description="Contains notes and feedback from the team about the upcoming features."
-                lastChanged="October 5, 2023"
-                link="/"
-              />
-              <SimpleCard
-                title="Collab Epic"
-                description="We are in the process of building a new epic. We will discuss the details and get feedback from the team."
-                lastChanged="August 20, 2023"
-                link="/"
-              />
-            </Stack>
+          <Stack
+            direction="row"
+            spacing={2}
+            sx={{
+              '@media (max-width: 600px)': {
+                display: 'none !important', // Use !important to override other styles
+              },
+            }}
+          >
+            <SimpleCard
+              title="Sprint retro"
+              description="Discussion about the recent sprint, contains notes and feedback from the team."
+              lastChanged="September 15, 2024"
+              link="/"
+            />
+            <SimpleCard
+              title="Feature planning"
+              description="Contains notes and feedback from the team about the upcoming features."
+              lastChanged="October 5, 2024"
+              link="/"
+            />
+            <SimpleCard
+              title="Collab Epic"
+              description="We are in the process of building a new epic. We will discuss the details and get feedback from the team."
+              lastChanged="August 20, 2024"
+              link="/"
+            />
+          </Stack>
         ) : (
-            <Stack direction="row" spacing={2}>
-              <SimpleCard
-                title="Github questions"
-                description="Learn how to manage your private conversations securely."
-                lastChanged="October 10, 2023"
-                        link="/"
-
-              />
-              <SimpleCard
-                title="Legal questions"
-                description="Understand and configure your privacy settings for private chats."
-                lastChanged="October 12, 2023"
-                        link="/"
-
-              />
-              <SimpleCard
-                title="Time management"
-                description="Understand and configure your privacy settings for private chats."
-                lastChanged="October 12, 2023"
-                link="/"
-              />
-            </Stack>
+          <Stack
+          direction="row"
+          spacing={2}
+          sx={{
+            '@media (max-width: 600px)': {
+              display: 'none !important', // Use !important to override other styles
+            },
+          }}
+        >
+            <SimpleCard
+              title="Github questions"
+              description="Learn how to manage your private conversations securely."
+              lastChanged="October 10, 2024"
+              link="/"
+            />
+            <SimpleCard
+              title="Legal questions"
+              description="Understand and configure your privacy settings for private chats."
+              lastChanged="October 12, 2024"
+              link="/"
+            />
+            <SimpleCard
+              title="Time management"
+              description="Understand and configure your privacy settings for private chats."
+              lastChanged="October 12, 2024"
+              link="/"
+            />
+          </Stack>
         )}
         <Box sx={{position:'absolute', bottom:0, display: 'flex', justifyContent: 'center', marginBottom: '20px' }}>
           <Button

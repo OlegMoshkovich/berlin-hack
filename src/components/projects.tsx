@@ -37,14 +37,14 @@ export default function Projects() {
               title="Mobile wireframe"
               height="180px"
               description="Design the UX wireframe for the mobile app"
-              lastChanged="October 5, 2023"
+              lastChanged="October 5, 2024"
               link="/sample-project"
             />
             <SimpleCard
               title="Onboarding documents"
               height="180px"
               description="Design a set of onboarding documents for a developer user persona"
-              lastChanged="August 20, 2023"
+              lastChanged="August 20, 2024"
               link="/sample-project"
             />
           </Stack>

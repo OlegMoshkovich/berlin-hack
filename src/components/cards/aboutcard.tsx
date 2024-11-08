@@ -23,7 +23,7 @@ export default function AboutCard({ expertType }: AboutCardProps) {
       <Card>
         <CardHeader>
           <CardTitle>{expertType.charAt(0).toUpperCase() + expertType.slice(1)}</CardTitle>
-          <CardDescription>Last update: 7/11/2024 by</CardDescription>
+          <CardDescription>Last update: 7/11/2024 </CardDescription>
         </CardHeader>
         <CardContent className="text-sm text-muted-foreground/90 leading-normal prose">
           <p className="mb-3">{descriptions[expertType]}</p>

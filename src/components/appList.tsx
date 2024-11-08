@@ -48,21 +48,21 @@ export default function AppList() {
           title="Sales Trainer"
           height="180px"
           description="Simulate sales calls to improve your pitch and closing skills."
-          lastChanged="September 15, 2023"
+          lastChanged="September 15, 2024"
           link="/sales"
         />
         <SimpleCard
           title="Speaking Coach"
           height="180px"
           description="Enhance your public speaking skills with personalized feedback and practice sessions."
-          lastChanged="October 5, 2023"
+          lastChanged="October 5, 2024"
           link="/coach"
         />
         <SimpleCard
           title="Therapist"
           height="180px"
           description="Engage in guided therapy sessions to explore your thoughts and emotions."
-          lastChanged="August 20, 2023"
+          lastChanged="August 20, 2024"
           link="/therapist"
         />
       </Stack>

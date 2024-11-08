@@ -86,19 +86,19 @@ export default function ChatComponent() {
             <SimpleCard
               title="Chat Introduction"
               description="Learn how to use the chat effectively."
-              lastChanged="September 15, 2023"
+              lastChanged="September 15, 2024"
               link="/chat-introduction"
             />
             <SimpleCard
               title="Feature Highlights"
               description="Discover the new features added recently."
-              lastChanged="October 5, 2023"
+              lastChanged="October 5, 2024"
               link="/feature-highlights"
             />
             <SimpleCard
               title="User Guide"
               description="A comprehensive guide to help you navigate."
-              lastChanged="August 20, 2023"
+              lastChanged="August 20, 2024"
               link="/user-guide"
             />
           </Stack>
@@ -106,19 +106,19 @@ export default function ChatComponent() {
             <SimpleCard
               title="FAQ"
               description="Frequently asked questions about the chat."
-              lastChanged="July 30, 2023"
+              lastChanged="July 30, 2024"
               link="/faq"
             />
             <SimpleCard
               title="Support"
               description="Contact support for any issues or queries."
-              lastChanged="October 1, 2023"
+              lastChanged="October 1, 2024"
               link="/support"
             />
             <SimpleCard
               title="Updates"
               description="Stay updated with the latest news and updates."
-              lastChanged="September 25, 2023"
+              lastChanged="September 25, 2024"
               link="/updates"
             />
           </Stack>
