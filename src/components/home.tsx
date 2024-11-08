@@ -47,11 +47,11 @@ export default function Home() {
       <Box sx={{ width: '100%', maxWidth: '710px', height: '240px', overflowY: 'auto', borderRadius: '8px', padding: '16px' }}>
         {!messages.length && (
           <Stack direction='column' spacing={2} justifyContent="center" alignItems="center" sx={{ width: '100%' }}>
-            <Typography variant='overline' sx={{ fontWeight: 'bold', paddingTop:'40px' }}>Orchestrated AI workspace | Prototype</Typography>
-            <Typography variant="caption" gutterBottom sx={{ width: '720px', paddingBottom: '16px', backgroundColor: 'white', padding: '16px', borderRadius: '12px' }}>
-            This framework was developed during 24h hackathon organized by Milvus and Google in Berlin.
+            <Typography variant='overline' sx={{ fontWeight: 'bold', paddingTop:'40px' }}>Orchestrated workspace</Typography>
+            <Typography variant="body2" gutterBottom sx={{ width: '720px', paddingBottom: '16px', backgroundColor: 'white', padding: '16px', borderRadius: '12px' }}>
+            This framework was created during 24h hackathon organized by Milvus and Google in Berlin.
             <br/>
-            It is built with the intenion to demonstrate integration of AI applications, expert systems, and workspaces. </Typography>
+            It exlores integration of AI applications, expert systems, and collaborative project environments. </Typography>
           </Stack>
         )}
         {messages.map((message, index) => (
@@ -90,6 +90,7 @@ export default function Home() {
               >
                 <MenuItem value="chatgpt">ChatGPT</MenuItem>
                 <MenuItem value="claude">Claude</MenuItem>
+                <MenuItem value="claude">Gemini</MenuItem>
                 <MenuItem value="custom">Custom</MenuItem>
               </Select>
               <TextField
@@ -124,8 +125,11 @@ export default function Home() {
       <Box sx={{ width: '100%', maxWidth: '720px', borderBottom: '1px solid lightgrey', marginBottom: '20px', backgroundColor:'lightgrey' }} />
       <>
         {showCards ? (
-          <Stack direction='column' spacing={2} sx={{paddingTop:'0px'}}>
-            <Stack direction="row" spacing={2}>
+            <Stack direction="row" spacing={2} sx={{paddingTop:'0px' , '@media (max-width: 600px)': {
+              width: '80%',
+              overflowX: 'auto',
+              maxWidth: '400px',
+            },}}>
               <SimpleCard
                 title="Sprint retro"
                 description="Discussion about the recent sprint, contains notes and feedback from the team."
@@ -145,9 +149,7 @@ export default function Home() {
                 link="/"
               />
             </Stack>
-          </Stack>
         ) : (
-          <Stack direction='column' spacing={2} >
             <Stack direction="row" spacing={2}>
               <SimpleCard
                 title="Github questions"
@@ -170,7 +172,6 @@ export default function Home() {
                 link="/"
               />
             </Stack>
-          </Stack>
         )}
         <Box sx={{position:'absolute', bottom:0, display: 'flex', justifyContent: 'center', marginBottom: '20px' }}>
           <Button

@@ -62,21 +62,21 @@ export default function Experts() {
                 <SimpleCard
                   title="Researcher"
                   height="180px"
-                  description="Answers your questions by searching our company's documents and providing accurate information along with the source."
+                  description="Finds answers and sources from company documents."
                   lastChanged="September 15, 2023"
                   link="/researcher"
                 />
                 <SimpleCard
                   title="Designer"
                   height="180px"
-                  description="Answers your questions by searching our company's documents and providing accurate information along with the source."
+                  description="Provides design insights from company resources."
                   lastChanged="October 5, 2023"
                   link="/designer"
                 />
                 <SimpleCard
                   title="Developer"
                   height="180px"
-                  description="A comprehensive guide to help you navigate. Access detailed chat history and usage tips."
+                  description="Offers insights and solutions in application development and computer science."
                   lastChanged="August 20, 2023"
                   link="/developer"
                 />
