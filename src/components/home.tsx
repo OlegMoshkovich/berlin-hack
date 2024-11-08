@@ -51,7 +51,7 @@ export default function Home() {
             <Typography variant="body2" gutterBottom sx={{ width: '720px', paddingBottom: '16px', backgroundColor: 'white', padding: '16px', borderRadius: '12px' }}>
             This framework was created during 24h hackathon organized by Milvus and Google in Berlin.
             <br/>
-            It exlores integration of AI applications, expert systems, and collaborative project environments. </Typography>
+            It explores integration of AI applications, expert systems, and collaborative project environments. </Typography>
           </Stack>
         )}
         {messages.map((message, index) => (
