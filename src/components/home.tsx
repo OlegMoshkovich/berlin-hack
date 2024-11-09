@@ -44,7 +44,7 @@ export default function Home() {
     <Box sx={{ width: '100%', overflow: 'auto', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-start', minHeight: '100vh' }}>
 
 
-      <Box sx={{ width: '100%', maxWidth: '710px', height: '240px', overflowY: 'auto', borderRadius: '8px', padding: '16px' }}>
+      <Box sx={{ width: '100%', maxWidth: '730px', height: '240px', overflowY: 'auto', borderRadius: '8px', padding: '16px' }}>
         {!messages.length && (
           <Stack direction='column' spacing={2} justifyContent="center" alignItems="center" sx={{ width: '100%', borderRadius:'8px' }}>
             <Typography variant='overline' sx={{ fontWeight: 'bold', paddingTop:'40px' }}>Orchestrated workspace</Typography>
@@ -69,7 +69,7 @@ export default function Home() {
           </Box>
         ))}
       </Box>
-      <Box sx={{ width: '100%', maxWidth: '750px', marginBottom: '0px' }}>
+      <Box sx={{ width: '100%', maxWidth: '750px', marginBottom: '10px', marginTop:'-24px' }}>
         <Card sx={{ padding: '16px', backgroundColor:'transparent' }} elevation={0}>
           <form onSubmit={handleSubmit}>
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
@@ -128,7 +128,7 @@ export default function Home() {
           textAlign: 'left',
           width: '100%',
           maxWidth: '720px',
-          marginTop: '20px',
+          marginTop: '40px',
           '@media (max-width: 600px)': {
             display: 'none', // Hide on mobile
           },

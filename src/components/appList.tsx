@@ -30,7 +30,7 @@ export default function AppList() {
         sx={{
           width: isMobile ? '90%' : '720px',
           paddingBottom: '16px',
-          backgroundColor: 'white',
+          backgroundColor: 'transparent',
           padding: '16px',
           borderRadius: '12px',
           textAlign: 'center',

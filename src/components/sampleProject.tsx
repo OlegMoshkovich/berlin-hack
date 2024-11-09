@@ -66,7 +66,7 @@ export default function SampleProject() {
         <Typography variant="overline" gutterBottom sx={{ fontWeight: 'bold' }}>
             Mobile wireframe - project workspace
           </Typography>
-        <Typography variant="caption" gutterBottom sx={{ width: '720px', paddingBottom: '16px', backgroundColor: 'white', padding: '16px', borderRadius: '12px' }}>
+        <Typography variant="caption" gutterBottom sx={{ width: '720px', paddingBottom: '16px', backgroundColor: 'transparent', padding: '16px', borderRadius: '12px' }}>
           We are putting together a mobile wireframe for the collaborative workspace application built with AI. This project includes a designer expert and a developer expert. We are using user interview results to craft the mobile experience and create wireframes that represent the user flow.
         </Typography>
       </Stack>

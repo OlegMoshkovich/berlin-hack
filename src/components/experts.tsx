@@ -55,7 +55,7 @@ export default function Experts() {
               <Typography variant="overline" gutterBottom sx={{ fontWeight: 'bold',paddingTop: isMobile ? '50px' : '0' }}>
                 Experts
               </Typography>
-              <Typography variant="caption" gutterBottom sx={{ width: isMobile ? '90%' : '720px', paddingBottom: '16px', backgroundColor: 'white', padding: '16px', borderRadius: '12px' }}>
+              <Typography variant="caption" gutterBottom sx={{ width: isMobile ? '90%' : '720px', paddingBottom: '16px', backgroundColor: 'transparent', padding: '16px', borderRadius: '12px' }}>
                 Experts are highly trained agents developed in collaboration with subject matter experts and specialized technical contributors. They utilize sophisticated architectures tailored to specific use cases, allowing them to act as adept copilots within workflows. Context-aware and highly skilled, these experts can be invited to projects to offer their expertise and provide valuable perspectives.
               </Typography>
               <Stack direction={isMobile ? "column" : "row"} spacing={2}>

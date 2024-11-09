@@ -20,7 +20,7 @@ export async function Header() {
             Projects
           </Link>
         </Stack>
-        <Box sx={{width:'20px',height:'20px',color:'white', border:'3px solid black', borderRadius:'2px'}}/>
+        <Box sx={{width:'20px',height:'20px',color:'white', border:'2px solid black', borderRadius:'2px'}}/>
     </header>
   )
 }
