@@ -45,9 +45,9 @@ export default function AppList() {
         sx={{ width: '100%', alignItems: 'center' }}
       >
         <SimpleCard
-          title="Sales Trainer"
+          title="Persuasion Trainer"
           height="180px"
-          description="Simulate sales calls to improve your pitch and closing skills."
+          description="Enhance your persuasion skills through simulated interactions, refining your approach and closing techniques."
           lastChanged="September 15, 2024"
           link="/sales"
         />
@@ -59,7 +59,7 @@ export default function AppList() {
           link="/coach"
         />
         <SimpleCard
-          title="Therapist"
+          title="Counsel"
           height="180px"
           description="Engage in guided therapy sessions to explore your thoughts and emotions."
           lastChanged="August 20, 2024"

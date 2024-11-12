@@ -30,23 +30,23 @@ export default function GenUI() {
           <div style={{ fontWeight: 'bold' }}>Trainer:</div>
           <ul>
             <li>
-              This tool is designed to help you practice and enhance your sales skills through realistic client interactions over the phone. It provides a safe environment to refine your approach, handle objections, and improve your closing techniques, tailored to various sales stages and client profiles.
+              This tool is designed to help you practice and enhance your persuasion skills through realistic client interactions over the phone. It provides a safe environment to refine your approach, handle objections, and improve your closing techniques, tailored to various persuasion stages and client profiles.
             </li>
             <li>
               <div style={{ fontWeight: 'bold' }}>How to Use:</div>
               <ul>
-                <li>Start the Simulation:</li>
-                <li>Product or Service: Specify what you will be selling.</li>
-                <li>Target Client: Define who you are speaking to.</li>
-                <li>Role or Position of the Client: Mention who you will be addressing (e.g., decision-maker, influencer).</li>
-                <li>Sales Objectives: Define what you aim to achieve in this conversation (e.g., close a deal, gather information).</li>
-                <li>Conversation Difficulty (1-10): Indicate how challenging you would like the conversation to be.</li>
-                <li>Client Status: State whether the client is new, existing, or a lead you have lost contact with.</li>
-                <li>Sales Stage: Specify whether this is an initial pitch, a follow-up, or a closing call.</li>
+                <li>Initiate the Training Session:</li>
+                <li>Product or Service: Define the item or service you will be persuading about.</li>
+                <li>Target Audience: Identify the individual or group you are addressing.</li>
+                <li>Audience Role: Specify the role or position of your audience (e.g., decision-maker, influencer).</li>
+                <li>Persuasion Goals: Clarify what you aim to achieve in this interaction (e.g., convince, inform).</li>
+                <li>Challenge Level (1-10): Set the difficulty level for the persuasion scenario.</li>
+                <li>Audience Status: Indicate whether the audience is new, familiar, or previously engaged.</li>
+                <li>Interaction Stage: Define whether this is an introduction, a follow-up, or a concluding argument.</li>
               </ul>
             </li>
             <li>
-              <div style={{ fontWeight: 'bold' }}>Engage in Conversation:</div>
+              <div style={{ fontWeight: 'bold' }}>Engage in Persuasion:</div>
               <ul>
                 <li>The simulator will assume the role of a client and initiate a conversation based on the details you have provided.</li>
                 <li>It will simulate realistic factors such as time constraints, client engagement, product relevance, urgency level, and the expectations of the client, depending on the difficulty level you have set.</li>

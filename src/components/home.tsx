@@ -1,12 +1,13 @@
 'use client';
 
-import { Box, Card, TextField, Button, Typography, Stack, Switch, FormControlLabel, Select, MenuItem } from '@mui/material';
+import { Box, Card, TextField, Button, Typography, Stack, Select, MenuItem } from '@mui/material';
 import { type CoreMessage } from 'ai';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { continueTextConversation } from '@/app/actions';
 import { readStreamableValue } from 'ai/rsc';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import SimpleCard from "@/components/SimpleCard";
+import LoadingScreen from './loadingScreen'; // Import the LoadingScreen component
 
 export const maxDuration = 30;
 
@@ -15,6 +16,15 @@ export default function Home() {
   const [input, setInput] = useState<string>('');
   const [showCards, setShowCards] = useState<boolean>(false);
   const [selectedModel, setSelectedModel] = useState<string>('chatgpt');
+  const [loading, setLoading] = useState<boolean>(true); // Loading state
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false); // Set loading to false after 3 seconds
+    }, 3000);
+
+    return () => clearTimeout(timer); // Cleanup the timer on component unmount
+  }, []);
 
   const handleToggleCards = () => {
     setShowCards(!showCards);
@@ -40,21 +50,34 @@ export default function Home() {
     }
   }
 
+  if (loading) {
+    return <LoadingScreen />; // Display the loading screen if loading is true
+  }
+
   return (
     <Box sx={{ width: '100%', overflow: 'auto', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-start', minHeight: '100vh' }}>
-
-
-      <Box sx={{ width: '100%', maxWidth: '730px', height: '240px', overflowY: 'auto', borderRadius: '8px', padding: '16px' }}>
+      <Box sx={{
+         width: '100%',
+         maxWidth: '774px',
+         height: '240px',
+         overflowY: 'auto',
+         borderRadius: '8px',
+         padding: '16px',
+         '@media (max-width: 600px)': {
+          height: '400px',
+        },
+         }}>
         {!messages.length && (
           <Stack direction='column' spacing={2} justifyContent="center" alignItems="center" sx={{ width: '100%', borderRadius:'8px' }}>
-            <Typography variant='overline' sx={{ fontWeight: 'bold', paddingTop:'40px' }}>Orchestrated workspace</Typography>
-            <Typography variant="body2" gutterBottom sx={{ width: '100%', paddingBottom: '16px',padding: '16px', borderRadius: '12px' }}>
-            This framework was created during 24h hackathon organized by Milvus and Google in Berlin.
-            <br/>
-            It explores integration of AI applications, expert systems, and collaborative project environments. </Typography>
+            <Typography variant='overline' sx={{ fontWeight: 'bold', paddingTop:'40px' }}>Workspace</Typography>
+            <Typography variant="body2" gutterBottom sx={{ width: '100%', padding: '16px', borderRadius: '12px' }}>
+              This framework explores integration of AI applications, expert systems, and collaborative project environments.
+              <Box component="span" sx={{ display: { xs: 'none', sm: 'inline' } }}><br /></Box>
+              It was created during 24h hackathon organized by Milvus and Google in Berlin.
+            </Typography>
           </Stack>
         )}
-        {messages.map((message, index) => (
+          {messages.map((message, index) => (
           <Box key={index} sx={{ whiteSpace: 'pre-wrap', display: 'flex', marginBottom: '16px' }}>
             <Box
               sx={{
@@ -64,12 +87,21 @@ export default function Home() {
                 borderRadius: '4px',
               }}
             >
-              <Typography variant='body2' sx={{ fontSize:'13px' }} >{message.content as string}</Typography>
+              <Typography variant='body2' sx={{ fontSize:'12px' }} >{message.content as string}</Typography>
             </Box>
           </Box>
         ))}
       </Box>
-      <Box sx={{ width: '100%', maxWidth: '750px', marginBottom: '10px', marginTop:'-24px' }}>
+      <Box
+      sx={{
+         width: '100%',
+         maxWidth: '750px',
+         marginBottom: '10px',
+         marginTop:'-24px',
+         '@media (max-width: 600px)': {
+          marginTop:'-10px',
+        },
+         }}>
         <Card sx={{ padding: '16px', backgroundColor:'transparent' }} elevation={0}>
           <form onSubmit={handleSubmit}>
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
@@ -90,7 +122,7 @@ export default function Home() {
               >
                 <MenuItem value="chatgpt">ChatGPT</MenuItem>
                 <MenuItem value="claude">Claude</MenuItem>
-                <MenuItem value="claude">Gemini</MenuItem>
+                <MenuItem value="gemini">Gemini</MenuItem>
                 <MenuItem value="custom">Custom</MenuItem>
               </Select>
               <TextField
@@ -128,7 +160,7 @@ export default function Home() {
           textAlign: 'left',
           width: '100%',
           maxWidth: '720px',
-          marginTop: '40px',
+          marginTop: '20px',
           '@media (max-width: 600px)': {
             display: 'none', // Hide on mobile
           },
@@ -189,20 +221,20 @@ export default function Home() {
           }}
         >
             <SimpleCard
-              title="Github questions"
-              description="Learn how to manage your private conversations securely."
+              title="Development"
+              description="This thread contatains the information related to software development topics."
               lastChanged="October 10, 2024"
               link="/"
             />
             <SimpleCard
-              title="Legal questions"
-              description="Understand and configure your privacy settings for private chats."
+              title="Moving to Germany"
+              description="Thread related to issue associated with moving."
               lastChanged="October 12, 2024"
               link="/"
             />
             <SimpleCard
               title="Time management"
-              description="Understand and configure your privacy settings for private chats."
+              description="Colelcting information about different ways to manage time for cadence."
               lastChanged="October 12, 2024"
               link="/"
             />
